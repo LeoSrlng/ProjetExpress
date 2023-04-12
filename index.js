@@ -1,13 +1,15 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 8080;
+
+app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-	res.send("Hello World!");
+	res.render("home", { teste: "salut via une variable" });
 });
 
 app.listen(port, () => {
-	console.log(`Example app listening on port ${port}`);
+	console.log(`Serveur lancé sur le port ${port}`);
 });
