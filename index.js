@@ -1,15 +1,10 @@
 const express = require("express");
 const app = express();
 const port = 8080;
-
-app.set("view engine", "ejs");
+const router = require("./Routes/router");
 
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-	res.render("home", { teste: "salut via une variable" });
-});
+app.use("/", router);
 
-app.listen(port, () => {
-	console.log(`Serveur lancé sur le port ${port}`);
-});
+app.listen(port, console.log(`Serveur lancé sur le port ${port}`));
