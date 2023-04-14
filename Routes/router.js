@@ -1,18 +1,12 @@
-var express = require("express");
-var router = express.Router();
+import HomeController from "../controllers/home.js";
+import SalonController from "../controllers/salon.js";
+import express from "express";
 
-router.use(function timeLog(req, res, next) {
-	console.log("Time: ", Date.now());
-	next();
-});
+const router = express.Router();
 
-router.get("/", (req, res) => {
-	res.render("home.ejs", { teste: "salut via une variable" });
-});
+router.get("/", HomeController);
 
-router.get("/page1", function (req, res) {
-	res.send("ici la future page page1");
-});
+router.get("/salon/:id", SalonController);
 
 router.get("/page2", function (req, res) {
 	res.send("ici la future page page2");
@@ -22,4 +16,4 @@ router.get("/page3", function (req, res) {
 	res.send("ici la future page page3");
 });
 
-module.exports = router;
+export default router;

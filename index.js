@@ -1,7 +1,7 @@
-const express = require("express");
+import express from "express";
 const app = express();
 const port = 8080;
-const router = require("./Routes/router");
+import router from "./Routes/router.js";
 
 app.use(express.static("public"));
 
