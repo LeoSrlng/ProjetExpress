@@ -1,4 +1,4 @@
 export default (req, res) => {
 	
-	res.render("home.ejs");
+	res.render("header.ejs");
 };

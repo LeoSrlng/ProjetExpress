@@ -1,3 +1,4 @@
 export default (req, res) => {
-	res.render("salon.ejs");
+	let NumSalon = req.params.id
+	res.render("salon.ejs", { NumSalon });
 };
