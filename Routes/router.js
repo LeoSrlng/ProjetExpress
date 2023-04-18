@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.use(function num(req, res, next) {
 	let NumSalon = Math.floor(Math.random() * 9999);
-	res.locals.NumSalon = NumSalon
+	res.locals.NumSalon = NumSalon;
 	next();
 });
 
