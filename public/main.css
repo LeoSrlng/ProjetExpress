@@ -27,15 +27,6 @@ h1 {
 	color: red;
 }
 
-section {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	background-color: lightslategray;
-	padding: 1em;
-}
-
 #form {
 	background: rgba(0, 0, 0, 0.15);
 	padding: 0.25rem;
@@ -81,7 +72,4 @@ section {
 }
 #messages > li {
 	padding: 0.5rem 1rem;
-}
-#messages > li:nth-child(odd) {
-	background: #efefef;
 }
